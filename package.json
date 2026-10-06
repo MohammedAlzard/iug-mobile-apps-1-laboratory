@@ -1,0 +1,11 @@
+{
+  "name": "iug-mobile-apps-1-laboratory",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "prepare:site": "node scripts/prepare-site.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

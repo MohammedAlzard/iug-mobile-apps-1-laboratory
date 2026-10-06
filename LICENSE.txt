@@ -1,0 +1,10 @@
+Copyright (c) 2026 Mohammed Anwar Alzard.
+Content and site design prepared for the MOBC 2101 practical course.
+All rights reserved unless the owner grants permission otherwise.
+
+The supplied instructor portrait is used for this course identity.
+University and faculty names and logos remain the property of their respective institutions.
+References to third-party software and documentation do not transfer their ownership or licenses.
+
+حقوق المحتوى وتصميم الموقع محفوظة لم. محمد أنور الزرد، 2026.
+شعارا الجامعة الإسلامية بغزة وكلية تكنولوجيا المعلومات لجهتيهما.

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#17644d" />
+    <meta
+      name="description"
+      content="دليل محاضرات مساق MOBC 2101: شرح وخطوات تطبيق وأكواد لكل محاضرة. ابدأ مع L01 لإعداد Android Studio وتشغيل Kotlin."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MOBC 2101 | دليل محاضرات المساق" />
+    <meta
+      property="og:description"
+      content="أدلة المحاضرات والأكواد والتطبيق العملي · الجامعة الإسلامية بغزة"
+    />
+    <title>دليل محاضرات المساق | MOBC 2101</title>
+    <link rel="icon" type="image/png" href="assets/images/university.png" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script>
+      // Apply preferences before rendering to avoid a flash in the wrong theme.
+      (function () {
+        var p = {};
+        try {
+          p = JSON.parse(localStorage.getItem("mobc2101-preferences") || "{}") || {};
+        } catch (_) {}
+        var lang = new URLSearchParams(location.search).get("lang") || p.lang || "ar";
+        if (lang !== "ar" && lang !== "en") lang = "ar";
+        var theme =
+          p.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+        document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light";
+      })();
+    </script>
+    <script defer src="assets/content.js"></script>
+    <script defer src="assets/guide.js"></script>
+    <script defer src="assets/ui.js"></script>
+    <script defer src="assets/views.js"></script>
+    <script defer src="assets/app.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link" data-i18n="skip">الانتقال إلى المحتوى</a>
+    <header class="masthead">
+      <div class="masthead-inner">
+        <a
+          class="institution institution-university"
+          href="#overview"
+          aria-label="الصفحة الرئيسية"
+          id="homeLink"
+        >
+          <span class="seal"
+            ><img
+              src="assets/images/university.png"
+              width="64"
+              height="64"
+              alt="شعار الجامعة الإسلامية بغزة"
+              id="uniLogo"
+          /></span>
+          <span
+            ><strong id="universityName">الجامعة الإسلامية بغزة</strong
+            ><small data-i18n="academicGuide">دليل المساق العملي</small></span
+          >
+        </a>
+        <div class="institution institution-faculty">
+          <span class="seal"
+            ><img
+              src="assets/images/faculty.png"
+              width="58"
+              height="58"
+              alt="شعار كلية تكنولوجيا المعلومات"
+              id="facultyLogo"
+          /></span>
+          <span
+            ><strong id="facultyName">كلية تكنولوجيا المعلومات</strong
+            ><small dir="ltr">MOBC 2101 · 2026 / 2027</small></span
+          >
+        </div>
+        <div class="preferences" aria-label="إعدادات العرض" id="preferencesLabel">
+          <button
+            type="button"
+            class="utility-button language-button"
+            id="languageButton"
+            lang="en"
+            dir="ltr"
+          >
+            English
+          </button>
+          <button
+            type="button"
+            class="utility-button icon-button"
+            id="themeButton"
+            aria-label="تغيير المظهر"
+          ></button>
+        </div>
+      </div>
+    </header>
+    <div class="course-strip">
+      <div class="wrap">
+        <span id="courseName">برمجة تطبيقات الأجهزة الذكية (1) – عملي</span
+        ><span class="course-code" dir="ltr">MOBC 2101</span>
+      </div>
+    </div>
+    <div class="workspace wrap">
+      <aside class="sidebar" id="sidebar" aria-label="خريطة الدليل">
+        <div class="sidebar-top">
+          <span class="eyebrow" data-i18n="guideMap">خريطة الدليل</span
+          ><a class="overview-link" href="#overview" data-i18n="overview">نظرة عامة</a>
+        </div>
+        <div class="progress-area" id="progressArea">
+          <div class="progress-label">
+            <strong data-i18n="yourProgress">تقدم الإعداد</strong
+            ><span id="progressText" dir="ltr">0 / 9</span>
+          </div>
+          <div
+            class="progress-track"
+            role="progressbar"
+            id="progressBar"
+            aria-valuemin="0"
+            aria-valuemax="9"
+            aria-valuenow="0"
+            aria-label="تقدم الإعداد"
+          >
+            <span id="progressFill"></span>
+          </div>
+          <small data-i18n="localProgress">محفوظ في هذا المتصفح فقط</small>
+        </div>
+        <nav id="guideNav" aria-label="خطوات الدليل"></nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <nav
+          id="lectureBreadcrumb"
+          class="lecture-breadcrumb"
+          aria-label="مسار التصفح"
+          hidden
+        ></nav>
+        <div class="mobile-navigation">
+          <label for="mobileSelect" data-i18n="jump">انتقل إلى</label
+          ><select id="mobileSelect"></select
+          ><span class="mobile-progress" id="mobileProgress" dir="ltr">0 / 9</span>
+        </div>
+        <div class="page-toolbar" id="pageToolbar">
+          <span class="toolbar-route" id="routeLabel"></span>
+          <details class="toolbar-menu">
+            <summary data-i18n="more">أدوات الصفحة</summary>
+            <div class="toolbar-actions">
+              <button
+                type="button"
+                id="focusButton"
+                class="text-button"
+                aria-pressed="false"
+              ></button>
+              <button type="button" id="shareButton" class="text-button"></button>
+              <button type="button" id="printButton" class="text-button"></button>
+              <button type="button" id="resetButton" class="text-button" data-i18n="reset">
+                إعادة ضبط التقدم
+              </button>
+            </div>
+          </details>
+        </div>
+        <div id="view"><p class="loading">جارٍ تحميل الدليل… / Loading guide…</p></div>
+        <noscript
+          ><section class="noscript">
+            <h1>دليل محاضرات المساق · Course lecture guide</h1>
+            <p>
+              فعّل JavaScript لعرض الخطوات باللغتين واستخدام أزرار النسخ. / Enable JavaScript to
+              display the bilingual guide and copy controls.
+            </p>
+          </section></noscript
+        >
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>
+          <strong id="footerAuthor">م. محمد أنور الزرد</strong
+          ><span data-i18n="footerRights"
+            >© 2026 — إعداد المحتوى والتصميم. جميع الحقوق محفوظة.</span
+          >
+        </div>
+        <div class="footer-logos">
+          <img
+            id="footerUniLogo"
+            src="assets/images/university.png"
+            alt="شعار الجامعة الإسلامية بغزة"
+            width="64"
+            height="64"
+            loading="lazy"
+          /><img
+            id="footerFacultyLogo"
+            src="assets/images/faculty.png"
+            alt="شعار كلية تكنولوجيا المعلومات"
+            width="64"
+            height="64"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <dialog id="resetDialog" class="dialog">
+      <h2 data-i18n="resetTitle">إعادة ضبط التقدم؟</h2>
+      <p data-i18n="resetDesc">
+        ستُمسح علامات الإنجاز وفحوص الجاهزية في هذا المتصفح فقط. تبقى اللغة والمظهر كما هما.
+      </p>
+      <div class="dialog-actions">
+        <button type="button" id="cancelReset" class="button secondary" data-i18n="cancel">
+          إلغاء</button
+        ><button type="button" id="confirmReset" class="button" data-i18n="confirmReset">
+          إعادة الضبط
+        </button>
+      </div>
+    </dialog>
+  </body>
+</html>
