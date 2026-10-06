@@ -19,19 +19,13 @@
     <link rel="icon" type="image/png" href="assets/images/university.png" />
     <link rel="stylesheet" href="assets/styles.css" />
     <script>
-      // Apply preferences before rendering to avoid a flash in the wrong theme.
+      // Open in Arabic and light mode; explicit language links still work.
       (function () {
-        var p = {};
-        try {
-          p = JSON.parse(localStorage.getItem("mobc2101-preferences") || "{}") || {};
-        } catch (_) {}
-        var lang = new URLSearchParams(location.search).get("lang") || p.lang || "ar";
+        var lang = new URLSearchParams(location.search).get("lang") || "ar";
         if (lang !== "ar" && lang !== "en") lang = "ar";
-        var theme =
-          p.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-        document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = "light";
       })();
     </script>
     <script defer src="assets/content.js"></script>
