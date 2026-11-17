@@ -9,7 +9,9 @@ Open `index.html`, keeping `assets` and `downloads` beside it. No dependencies, 
 
 ## Student journey
 
-The site opens with a welcome page and lecture cards. The only published card is **L01 — Set up Android Studio and run your first Kotlin code**. All current steps, help and sources belong to L01.
+The site opens with a welcome page and cards for **L01 — Set up Android Studio and run your first Kotlin code** and **L09 — Android project and interface design**. Setup steps, troubleshooting and installation sources belong to L01.
+
+L09 opens a bilingual XML reference with 14 sections and 150 attribute/value rows. Sections start expanded and can be toggled independently or with Expand all / Collapse all. Labels distinguish L09 material from references for later lectures. The reference supports mobile screens, dark mode and printing, without setup progress controls.
 
 L01 contains a nine-step sequence: requirements, Android Studio installation, first launch, SDK, emulator or phone, readiness, bundled Java, installing or updating Scoop and Kotlin, then manually creating the folder and main.kts and running it in Android Studio Terminal.
 

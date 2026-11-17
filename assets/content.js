@@ -49,6 +49,1220 @@ window.GUIDE_CONFIG = {
         "kotlin-2",
         "kotlin-3"
       ]
+    },
+    {
+      "id": "l09",
+      "code": "L09",
+      "title": {
+        "ar": "مشروع أندرويد وتصميم الواجهات",
+        "en": "Android project and interface design"
+      },
+      "description": {
+        "ar": "مرجع خصائص XML لتصميم الواجهات، مرتّب حسب الوظيفة مع شرح لكل خاصية.",
+        "en": "An XML attribute reference for interface design, grouped by purpose with an explanation of each attribute."
+      },
+      "overviewType": "xml-reference",
+      "stepIds": [],
+      "sections": [
+        {
+          "id": "text",
+          "title": {
+            "ar": "خصائص النصوص",
+            "en": "Text styling"
+          },
+          "scope": "L09",
+          "rows": [
+            [
+              "android:text=\"Welcome\"",
+              {
+                "ar": "تحديد النص الظاهر",
+                "en": "Set the displayed text"
+              }
+            ],
+            [
+              "android:textSize=\"24sp\"",
+              {
+                "ar": "تحديد حجم الخط",
+                "en": "Set the font size"
+              }
+            ],
+            [
+              "android:textColor=\"#173A70\"",
+              {
+                "ar": "تحديد لون النص",
+                "en": "Set the text color"
+              }
+            ],
+            [
+              "android:textColor=\"@color/primary_blue\"",
+              {
+                "ar": "استخدام لون من ملف الموارد",
+                "en": "Use a color resource"
+              }
+            ],
+            [
+              "android:textStyle=\"bold\"",
+              {
+                "ar": "جعل الخط عريضًا",
+                "en": "Use bold text"
+              }
+            ],
+            [
+              "android:textStyle=\"italic\"",
+              {
+                "ar": "جعل الخط مائلًا",
+                "en": "Use italic text"
+              }
+            ],
+            [
+              "android:textStyle=\"normal\"",
+              {
+                "ar": "استخدام الخط العادي",
+                "en": "Use the normal text style"
+              }
+            ],
+            [
+              "android:fontFamily=\"sans-serif\"",
+              {
+                "ar": "تحديد نوع الخط",
+                "en": "Choose the font family"
+              }
+            ],
+            [
+              "android:fontFamily=\"sans-serif-medium\"",
+              {
+                "ar": "استخدام خط متوسط السماكة",
+                "en": "Use a medium-weight font"
+              }
+            ],
+            [
+              "android:textAlignment=\"center\"",
+              {
+                "ar": "توسيط النص",
+                "en": "Center the text"
+              }
+            ],
+            [
+              "android:textAlignment=\"textStart\"",
+              {
+                "ar": "محاذاة النص إلى بداية اتجاه الكتابة",
+                "en": "Align text to the start of its writing direction"
+              }
+            ],
+            [
+              "android:textAllCaps=\"false\"",
+              {
+                "ar": "منع تحويل الأحرف الإنجليزية إلى كبيرة",
+                "en": "Keep English letters from being converted to uppercase"
+              }
+            ],
+            [
+              "android:maxLines=\"2\"",
+              {
+                "ar": "تحديد أقصى عدد أسطر",
+                "en": "Set the maximum number of lines"
+              }
+            ],
+            [
+              "android:minLines=\"1\"",
+              {
+                "ar": "تحديد أقل عدد أسطر",
+                "en": "Set the minimum number of lines"
+              }
+            ],
+            [
+              "android:ellipsize=\"end\"",
+              {
+                "ar": "إظهار نقاط عند اقتطاع نهاية النص",
+                "en": "Show an ellipsis when text is cut off at the end"
+              }
+            ],
+            [
+              "android:letterSpacing=\"0.02\"",
+              {
+                "ar": "تحديد المسافة بين الأحرف",
+                "en": "Set the spacing between letters"
+              }
+            ],
+            [
+              "android:lineSpacingExtra=\"4dp\"",
+              {
+                "ar": "إضافة مسافة بين أسطر النص",
+                "en": "Add extra space between text lines"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "dimensions",
+          "title": {
+            "ar": "خصائص الأبعاد",
+            "en": "Width & height"
+          },
+          "scope": "L09",
+          "rows": [
+            [
+              "android:layout_width=\"match_parent\"",
+              {
+                "ar": "جعل العرض يساوي المساحة المتاحة من الحاوية",
+                "en": "Fill the available width of the parent container"
+              }
+            ],
+            [
+              "android:layout_width=\"wrap_content\"",
+              {
+                "ar": "جعل العرض حسب حجم المحتوى",
+                "en": "Size the width to fit the content"
+              }
+            ],
+            [
+              "android:layout_width=\"200dp\"",
+              {
+                "ar": "تحديد عرض ثابت",
+                "en": "Set a fixed width"
+              }
+            ],
+            [
+              "android:layout_width=\"0dp\"",
+              {
+                "ar": "استخدام القيود أو الوزن لتحديد العرض، حسب نوع التخطيط",
+                "en": "Use constraints or weight to determine the width, depending on the layout"
+              }
+            ],
+            [
+              "android:layout_height=\"match_parent\"",
+              {
+                "ar": "جعل الارتفاع يساوي المساحة المتاحة من الحاوية",
+                "en": "Fill the available height of the parent container"
+              }
+            ],
+            [
+              "android:layout_height=\"wrap_content\"",
+              {
+                "ar": "جعل الارتفاع حسب حجم المحتوى",
+                "en": "Size the height to fit the content"
+              }
+            ],
+            [
+              "android:layout_height=\"50dp\"",
+              {
+                "ar": "تحديد ارتفاع ثابت",
+                "en": "Set a fixed height"
+              }
+            ],
+            [
+              "android:minWidth=\"100dp\"",
+              {
+                "ar": "تحديد أقل عرض",
+                "en": "Set the minimum width"
+              }
+            ],
+            [
+              "android:minHeight=\"48dp\"",
+              {
+                "ar": "تحديد أقل ارتفاع",
+                "en": "Set the minimum height"
+              }
+            ],
+            [
+              "android:maxWidth=\"300dp\"",
+              {
+                "ar": "تحديد أكبر عرض مدعوم للعنصر",
+                "en": "Set the maximum width supported by the element"
+              }
+            ],
+            [
+              "android:maxHeight=\"200dp\"",
+              {
+                "ar": "تحديد أكبر ارتفاع مدعوم للعنصر",
+                "en": "Set the maximum height supported by the element"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "padding",
+          "title": {
+            "ar": "خصائص المسافات الداخلية",
+            "en": "Padding"
+          },
+          "scope": "L09",
+          "rows": [
+            [
+              "android:padding=\"16dp\"",
+              {
+                "ar": "مسافة داخلية من جميع الجهات",
+                "en": "Add inner spacing on every side"
+              }
+            ],
+            [
+              "android:paddingTop=\"16dp\"",
+              {
+                "ar": "مسافة داخلية من الأعلى",
+                "en": "Add inner spacing at the top"
+              }
+            ],
+            [
+              "android:paddingBottom=\"16dp\"",
+              {
+                "ar": "مسافة داخلية من الأسفل",
+                "en": "Add inner spacing at the bottom"
+              }
+            ],
+            [
+              "android:paddingStart=\"16dp\"",
+              {
+                "ar": "مسافة داخلية من بداية اتجاه الواجهة",
+                "en": "Add inner spacing at the start of the interface direction"
+              }
+            ],
+            [
+              "android:paddingEnd=\"16dp\"",
+              {
+                "ar": "مسافة داخلية من نهاية اتجاه الواجهة",
+                "en": "Add inner spacing at the end of the interface direction"
+              }
+            ],
+            [
+              "android:paddingLeft=\"16dp\"",
+              {
+                "ar": "مسافة داخلية من اليسار",
+                "en": "Add inner spacing on the left"
+              }
+            ],
+            [
+              "android:paddingRight=\"16dp\"",
+              {
+                "ar": "مسافة داخلية من اليمين",
+                "en": "Add inner spacing on the right"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "margin",
+          "title": {
+            "ar": "خصائص المسافات الخارجية",
+            "en": "Margin"
+          },
+          "scope": "L09",
+          "rows": [
+            [
+              "android:layout_margin=\"16dp\"",
+              {
+                "ar": "مسافة خارجية من جميع الجهات",
+                "en": "Add outer spacing on every side"
+              }
+            ],
+            [
+              "android:layout_marginTop=\"16dp\"",
+              {
+                "ar": "مسافة خارجية من الأعلى",
+                "en": "Add outer spacing at the top"
+              }
+            ],
+            [
+              "android:layout_marginBottom=\"16dp\"",
+              {
+                "ar": "مسافة خارجية من الأسفل",
+                "en": "Add outer spacing at the bottom"
+              }
+            ],
+            [
+              "android:layout_marginStart=\"16dp\"",
+              {
+                "ar": "مسافة خارجية من بداية اتجاه الواجهة",
+                "en": "Add outer spacing at the start of the interface direction"
+              }
+            ],
+            [
+              "android:layout_marginEnd=\"16dp\"",
+              {
+                "ar": "مسافة خارجية من نهاية اتجاه الواجهة",
+                "en": "Add outer spacing at the end of the interface direction"
+              }
+            ],
+            [
+              "android:layout_marginLeft=\"16dp\"",
+              {
+                "ar": "مسافة خارجية من اليسار",
+                "en": "Add outer spacing on the left"
+              }
+            ],
+            [
+              "android:layout_marginRight=\"16dp\"",
+              {
+                "ar": "مسافة خارجية من اليمين",
+                "en": "Add outer spacing on the right"
+              }
+            ]
+          ],
+          "note": {
+            "ar": "الأفضل استخدام Start وEnd بدل Left وRight عند تصميم واجهات تدعم العربية والإنجليزية.",
+            "en": "Prefer Start and End over Left and Right when designing interfaces that support Arabic and English."
+          }
+        },
+        {
+          "id": "layout",
+          "title": {
+            "ar": "خصائص ترتيب العناصر والمحاذاة",
+            "en": "Layout & gravity"
+          },
+          "scope": "L09",
+          "rows": [
+            [
+              "android:orientation=\"vertical\"",
+              {
+                "ar": "ترتيب العناصر رأسيًا",
+                "en": "Arrange child elements vertically"
+              }
+            ],
+            [
+              "android:orientation=\"horizontal\"",
+              {
+                "ar": "ترتيب العناصر أفقيًا",
+                "en": "Arrange child elements horizontally"
+              }
+            ],
+            [
+              "android:gravity=\"center\"",
+              {
+                "ar": "توسيط المحتوى أفقيًا ورأسيًا",
+                "en": "Center the content horizontally and vertically"
+              }
+            ],
+            [
+              "android:gravity=\"start\"",
+              {
+                "ar": "محاذاة المحتوى إلى البداية",
+                "en": "Align the content to the start"
+              }
+            ],
+            [
+              "android:gravity=\"end\"",
+              {
+                "ar": "محاذاة المحتوى إلى النهاية",
+                "en": "Align the content to the end"
+              }
+            ],
+            [
+              "android:gravity=\"top\"",
+              {
+                "ar": "محاذاة المحتوى للأعلى",
+                "en": "Align the content to the top"
+              }
+            ],
+            [
+              "android:gravity=\"bottom\"",
+              {
+                "ar": "محاذاة المحتوى للأسفل",
+                "en": "Align the content to the bottom"
+              }
+            ],
+            [
+              "android:gravity=\"center_horizontal\"",
+              {
+                "ar": "توسيط المحتوى أفقيًا",
+                "en": "Center the content horizontally"
+              }
+            ],
+            [
+              "android:gravity=\"center_vertical\"",
+              {
+                "ar": "توسيط المحتوى رأسيًا",
+                "en": "Center the content vertically"
+              }
+            ],
+            [
+              "android:gravity=\"start|center_vertical\"",
+              {
+                "ar": "محاذاة المحتوى للبداية وتوسيطه رأسيًا",
+                "en": "Align the content to the start and center it vertically"
+              }
+            ],
+            [
+              "android:layout_gravity=\"center\"",
+              {
+                "ar": "توسيط العنصر داخل حاويته الداعمة",
+                "en": "Center the element in a parent that supports this attribute"
+              }
+            ],
+            [
+              "android:layout_gravity=\"center_horizontal\"",
+              {
+                "ar": "توسيط العنصر أفقيًا",
+                "en": "Center the element horizontally"
+              }
+            ],
+            [
+              "android:layout_gravity=\"end\"",
+              {
+                "ar": "وضع العنصر عند نهاية الحاوية",
+                "en": "Position the element at the end of its parent"
+              }
+            ],
+            [
+              "android:layout_weight=\"1\"",
+              {
+                "ar": "توزيع المساحة المتبقية داخل LinearLayout",
+                "en": "Distribute the remaining space within a LinearLayout"
+              }
+            ],
+            [
+              "android:layoutDirection=\"ltr\"",
+              {
+                "ar": "جعل اتجاه ترتيب الواجهة من اليسار إلى اليمين",
+                "en": "Arrange the interface from left to right"
+              }
+            ],
+            [
+              "android:layoutDirection=\"rtl\"",
+              {
+                "ar": "جعل اتجاه ترتيب الواجهة من اليمين إلى اليسار",
+                "en": "Arrange the interface from right to left"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "background",
+          "title": {
+            "ar": "خصائص الخلفيات والألوان",
+            "en": "Background & colors"
+          },
+          "scope": "L09",
+          "rows": [
+            [
+              "android:background=\"#FFFFFF\"",
+              {
+                "ar": "تحديد لون خلفية العنصر",
+                "en": "Set the background color"
+              }
+            ],
+            [
+              "android:background=\"@color/screen_bg\"",
+              {
+                "ar": "استخدام لون خلفية من الموارد",
+                "en": "Use a background color resource"
+              }
+            ],
+            [
+              "android:background=\"@drawable/bg_button\"",
+              {
+                "ar": "استخدام خلفية رسومية",
+                "en": "Use a drawable background"
+              }
+            ],
+            [
+              "android:backgroundTint=\"#173A70\"",
+              {
+                "ar": "تلوين خلفية العنصر",
+                "en": "Tint the background"
+              }
+            ],
+            [
+              "android:alpha=\"1\"",
+              {
+                "ar": "جعل العنصر ظاهرًا دون شفافية",
+                "en": "Display the element fully opaque"
+              }
+            ],
+            [
+              "android:alpha=\"0.5\"",
+              {
+                "ar": "جعل العنصر شبه شفاف",
+                "en": "Make the element partially transparent"
+              }
+            ],
+            [
+              "android:elevation=\"4dp\"",
+              {
+                "ar": "رفع العنصر بصريًا وقد يظهر له ظل",
+                "en": "Raise the element visually; it may cast a shadow"
+              }
+            ],
+            [
+              "android:foreground=\"?attr/selectableItemBackground\"",
+              {
+                "ar": "إضافة تأثير لمس قابل للاستخدام على عنصر تفاعلي",
+                "en": "Add touch feedback to an interactive element"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "input",
+          "title": {
+            "ar": "خصائص حقول الإدخال",
+            "en": "EditText"
+          },
+          "scope": "L11",
+          "rows": [
+            [
+              "android:hint=\"Email\"",
+              {
+                "ar": "عرض نص إرشادي داخل الحقل الفارغ",
+                "en": "Show a hint when the field is empty"
+              }
+            ],
+            [
+              "android:text=\"\"",
+              {
+                "ar": "تحديد القيمة النصية الابتدائية",
+                "en": "Set the initial text value"
+              }
+            ],
+            [
+              "android:textColor=\"#173A70\"",
+              {
+                "ar": "تحديد لون النص المدخل",
+                "en": "Set the color of entered text"
+              }
+            ],
+            [
+              "android:textColorHint=\"#808080\"",
+              {
+                "ar": "تحديد لون النص الإرشادي",
+                "en": "Set the hint text color"
+              }
+            ],
+            [
+              "android:inputType=\"text\"",
+              {
+                "ar": "إدخال نص عادي",
+                "en": "Enter plain text"
+              }
+            ],
+            [
+              "android:inputType=\"textPersonName\"",
+              {
+                "ar": "إدخال اسم شخص",
+                "en": "Enter a person's name"
+              }
+            ],
+            [
+              "android:inputType=\"textEmailAddress\"",
+              {
+                "ar": "إدخال بريد إلكتروني",
+                "en": "Enter an email address"
+              }
+            ],
+            [
+              "android:inputType=\"textPassword\"",
+              {
+                "ar": "إدخال كلمة مرور مع إخفاء الأحرف",
+                "en": "Enter a password with hidden characters"
+              }
+            ],
+            [
+              "android:inputType=\"textVisiblePassword\"",
+              {
+                "ar": "إدخال كلمة مرور بأحرف ظاهرة",
+                "en": "Enter a password with visible characters"
+              }
+            ],
+            [
+              "android:inputType=\"number\"",
+              {
+                "ar": "إدخال أرقام صحيحة",
+                "en": "Enter whole numbers"
+              }
+            ],
+            [
+              "android:inputType=\"numberDecimal\"",
+              {
+                "ar": "إدخال أرقام عشرية",
+                "en": "Enter decimal numbers"
+              }
+            ],
+            [
+              "android:inputType=\"numberSigned\"",
+              {
+                "ar": "السماح بالأرقام السالبة",
+                "en": "Allow negative numbers"
+              }
+            ],
+            [
+              "android:inputType=\"phone\"",
+              {
+                "ar": "إدخال رقم هاتف",
+                "en": "Enter a phone number"
+              }
+            ],
+            [
+              "android:inputType=\"textMultiLine\"",
+              {
+                "ar": "إدخال نص متعدد الأسطر",
+                "en": "Enter multiple lines of text"
+              }
+            ],
+            [
+              "android:inputType=\"textCapSentences\"",
+              {
+                "ar": "اقتراح حرف كبير في بداية الجملة الإنجليزية",
+                "en": "Suggest a capital letter at the start of an English sentence"
+              }
+            ],
+            [
+              "android:maxLength=\"50\"",
+              {
+                "ar": "تحديد أقصى عدد أحرف",
+                "en": "Set the maximum number of characters"
+              }
+            ],
+            [
+              "android:singleLine=\"true\"",
+              {
+                "ar": "جعل الإدخال في سطر واحد",
+                "en": "Use a single line of input"
+              }
+            ],
+            [
+              "android:maxLines=\"3\"",
+              {
+                "ar": "تحديد أقصى عدد أسطر ظاهرة",
+                "en": "Set the maximum number of visible lines"
+              }
+            ],
+            [
+              "android:minLines=\"2\"",
+              {
+                "ar": "تحديد أقل عدد أسطر ظاهرة",
+                "en": "Set the minimum number of visible lines"
+              }
+            ],
+            [
+              "android:imeOptions=\"actionDone\"",
+              {
+                "ar": "عرض إجراء Done بلوحة المفاتيح",
+                "en": "Show the Done action on the keyboard"
+              }
+            ],
+            [
+              "android:imeOptions=\"actionNext\"",
+              {
+                "ar": "عرض إجراء Next للانتقال للحقل التالي",
+                "en": "Show the Next action to move to the next field"
+              }
+            ],
+            [
+              "android:imeOptions=\"actionSearch\"",
+              {
+                "ar": "عرض إجراء البحث بلوحة المفاتيح",
+                "en": "Show the Search action on the keyboard"
+              }
+            ],
+            [
+              "android:selectAllOnFocus=\"true\"",
+              {
+                "ar": "تحديد النص كاملًا عند التركيز على الحقل",
+                "en": "Select all text when the field receives focus"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "buttons",
+          "title": {
+            "ar": "خصائص الأزرار",
+            "en": "Button"
+          },
+          "scope": "L11",
+          "rows": [
+            [
+              "android:text=\"Login\"",
+              {
+                "ar": "تحديد نص الزر",
+                "en": "Set the button text"
+              }
+            ],
+            [
+              "android:textSize=\"16sp\"",
+              {
+                "ar": "تحديد حجم نص الزر",
+                "en": "Set the button text size"
+              }
+            ],
+            [
+              "android:textColor=\"#FFFFFF\"",
+              {
+                "ar": "تحديد لون نص الزر",
+                "en": "Set the button text color"
+              }
+            ],
+            [
+              "android:textStyle=\"bold\"",
+              {
+                "ar": "جعل نص الزر عريضًا",
+                "en": "Use bold button text"
+              }
+            ],
+            [
+              "android:textAllCaps=\"false\"",
+              {
+                "ar": "منع تحويل النص الإنجليزي لأحرف كبيرة",
+                "en": "Keep English text from being converted to uppercase"
+              }
+            ],
+            [
+              "android:backgroundTint=\"#173A70\"",
+              {
+                "ar": "تغيير لون خلفية الزر",
+                "en": "Change the button background tint"
+              }
+            ],
+            [
+              "android:enabled=\"true\"",
+              {
+                "ar": "تفعيل الزر",
+                "en": "Enable the button"
+              }
+            ],
+            [
+              "android:enabled=\"false\"",
+              {
+                "ar": "تعطيل الزر",
+                "en": "Disable the button"
+              }
+            ],
+            [
+              "android:clickable=\"true\"",
+              {
+                "ar": "السماح للزر باستقبال النقر",
+                "en": "Allow the button to receive clicks"
+              }
+            ],
+            [
+              "android:visibility=\"visible\"",
+              {
+                "ar": "إظهار الزر",
+                "en": "Show the button"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "images",
+          "title": {
+            "ar": "خصائص الصور",
+            "en": "ImageView"
+          },
+          "scope": "L11",
+          "rows": [
+            [
+              "android:src=\"@drawable/student_logo\"",
+              {
+                "ar": "عرض صورة من الموارد",
+                "en": "Display an image from drawable resources"
+              }
+            ],
+            [
+              "android:scaleType=\"fitCenter\"",
+              {
+                "ar": "عرض الصورة كاملة داخل المساحة المتاحة",
+                "en": "Fit the entire image within the available area"
+              }
+            ],
+            [
+              "android:scaleType=\"centerCrop\"",
+              {
+                "ar": "ملء المساحة مع احتمال قص أطراف الصورة",
+                "en": "Fill the area, potentially cropping the image edges"
+              }
+            ],
+            [
+              "android:scaleType=\"centerInside\"",
+              {
+                "ar": "توسيط الصورة داخل العنصر دون تكبيرها",
+                "en": "Center the image inside the view without enlarging it"
+              }
+            ],
+            [
+              "android:scaleType=\"fitXY\"",
+              {
+                "ar": "تمديد الصورة لتملأ العرض والارتفاع وقد تتشوه",
+                "en": "Stretch the image to fill the width and height, possibly distorting it"
+              }
+            ],
+            [
+              "android:adjustViewBounds=\"true\"",
+              {
+                "ar": "السماح بتعديل أبعاد العنصر للحفاظ على تناسب الصورة ضمن القيود",
+                "en": "Allow the view bounds to adjust to preserve the image aspect ratio within constraints"
+              }
+            ],
+            [
+              "android:contentDescription=\"Student Logo\"",
+              {
+                "ar": "إضافة وصف للصورة لأدوات إمكانية الوصول",
+                "en": "Describe the image for accessibility tools"
+              }
+            ],
+            [
+              "android:tint=\"#173A70\"",
+              {
+                "ar": "تلوين الصورة، ويفيد خصوصًا مع الأيقونات البسيطة",
+                "en": "Tint the image; especially useful for simple icons"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "selection",
+          "title": {
+            "ar": "خصائص CheckBox وRadioButton",
+            "en": "CheckBox & RadioButton"
+          },
+          "scope": "L11",
+          "rows": [
+            [
+              "android:text=\"Remember me\"",
+              {
+                "ar": "تحديد نص خيار الاختيار",
+                "en": "Set the option label"
+              }
+            ],
+            [
+              "android:checked=\"true\"",
+              {
+                "ar": "جعل العنصر محددًا افتراضيًا",
+                "en": "Select the element by default"
+              }
+            ],
+            [
+              "android:checked=\"false\"",
+              {
+                "ar": "جعل العنصر غير محدد افتراضيًا",
+                "en": "Leave the element unselected by default"
+              }
+            ],
+            [
+              "android:buttonTint=\"#173A70\"",
+              {
+                "ar": "تغيير لون علامة الاختيار",
+                "en": "Change the selection indicator color"
+              }
+            ],
+            [
+              "android:enabled=\"false\"",
+              {
+                "ar": "منع المستخدم من تغيير الاختيار",
+                "en": "Prevent the user from changing the selection"
+              }
+            ],
+            [
+              "android:orientation=\"vertical\"",
+              {
+                "ar": "ترتيب خيارات RadioGroup رأسيًا",
+                "en": "Arrange RadioGroup options vertically"
+              }
+            ],
+            [
+              "android:orientation=\"horizontal\"",
+              {
+                "ar": "ترتيب خيارات RadioGroup أفقيًا",
+                "en": "Arrange RadioGroup options horizontally"
+              }
+            ],
+            [
+              "android:checkedButton=\"@id/studentRadio\"",
+              {
+                "ar": "تحديد RadioButton افتراضي داخل RadioGroup",
+                "en": "Select a default RadioButton within a RadioGroup"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "state",
+          "title": {
+            "ar": "خصائص إظهار العناصر وحالتها",
+            "en": "View state"
+          },
+          "scope": "L12–L13",
+          "rows": [
+            [
+              "android:visibility=\"visible\"",
+              {
+                "ar": "إظهار العنصر",
+                "en": "Show the element"
+              }
+            ],
+            [
+              "android:visibility=\"invisible\"",
+              {
+                "ar": "إخفاء العنصر مع الاحتفاظ بمساحته",
+                "en": "Hide the element while keeping its layout space"
+              }
+            ],
+            [
+              "android:visibility=\"gone\"",
+              {
+                "ar": "إخفاء العنصر دون الاحتفاظ بمساحته",
+                "en": "Hide the element and remove its layout space"
+              }
+            ],
+            [
+              "android:enabled=\"true\"",
+              {
+                "ar": "السماح بالتفاعل مع العنصر",
+                "en": "Allow interaction with the element"
+              }
+            ],
+            [
+              "android:enabled=\"false\"",
+              {
+                "ar": "تعطيل التفاعل مع العنصر",
+                "en": "Disable interaction with the element"
+              }
+            ],
+            [
+              "android:clickable=\"true\"",
+              {
+                "ar": "السماح باستقبال النقرات",
+                "en": "Allow the element to receive clicks"
+              }
+            ],
+            [
+              "android:focusable=\"true\"",
+              {
+                "ar": "السماح للعنصر بالحصول على التركيز",
+                "en": "Allow the element to receive focus"
+              }
+            ],
+            [
+              "android:focusableInTouchMode=\"true\"",
+              {
+                "ar": "السماح بالتركيز أثناء استخدام شاشة اللمس",
+                "en": "Allow focus while using the touch screen"
+              }
+            ],
+            [
+              "android:alpha=\"0\"",
+              {
+                "ar": "جعل العنصر شفافًا بالكامل دون إزالته من التخطيط",
+                "en": "Make the element fully transparent without removing it from the layout"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "constraints",
+          "title": {
+            "ar": "خصائص ConstraintLayout",
+            "en": "ConstraintLayout"
+          },
+          "scope": "L10",
+          "rows": [
+            [
+              "app:layout_constraintTop_toTopOf=\"parent\"",
+              {
+                "ar": "ربط أعلى العنصر بأعلى الحاوية",
+                "en": "Constrain the top of the element to the top of the parent"
+              }
+            ],
+            [
+              "app:layout_constraintBottom_toBottomOf=\"parent\"",
+              {
+                "ar": "ربط أسفل العنصر بأسفل الحاوية",
+                "en": "Constrain the bottom of the element to the bottom of the parent"
+              }
+            ],
+            [
+              "app:layout_constraintStart_toStartOf=\"parent\"",
+              {
+                "ar": "ربط بداية العنصر ببداية الحاوية",
+                "en": "Constrain the start of the element to the start of the parent"
+              }
+            ],
+            [
+              "app:layout_constraintEnd_toEndOf=\"parent\"",
+              {
+                "ar": "ربط نهاية العنصر بنهاية الحاوية",
+                "en": "Constrain the end of the element to the end of the parent"
+              }
+            ],
+            [
+              "app:layout_constraintTop_toBottomOf=\"@id/appTitle\"",
+              {
+                "ar": "وضع العنصر أسفل عنوان التطبيق",
+                "en": "Place the element below the app title"
+              }
+            ],
+            [
+              "app:layout_constraintBottom_toTopOf=\"@id/loginButton\"",
+              {
+                "ar": "وضع العنصر فوق زر تسجيل الدخول",
+                "en": "Place the element above the login button"
+              }
+            ],
+            [
+              "app:layout_constraintStart_toEndOf=\"@id/icon\"",
+              {
+                "ar": "ربط بداية العنصر بنهاية عنصر آخر",
+                "en": "Constrain the start of the element to the end of another element"
+              }
+            ],
+            [
+              "app:layout_constraintEnd_toStartOf=\"@id/icon\"",
+              {
+                "ar": "ربط نهاية العنصر ببداية عنصر آخر",
+                "en": "Constrain the end of the element to the start of another element"
+              }
+            ],
+            [
+              "app:layout_constraintHorizontal_bias=\"0.5\"",
+              {
+                "ar": "ضبط التمركز الأفقي بين قيدين متقابلين",
+                "en": "Adjust horizontal positioning between two opposing constraints"
+              }
+            ],
+            [
+              "app:layout_constraintVertical_bias=\"0.5\"",
+              {
+                "ar": "ضبط التمركز الرأسي بين قيدين متقابلين",
+                "en": "Adjust vertical positioning between two opposing constraints"
+              }
+            ],
+            [
+              "android:layout_width=\"0dp\"",
+              {
+                "ar": "جعل العرض يعتمد على القيود عند توفر قيود مناسبة",
+                "en": "Let constraints determine the width when suitable constraints exist"
+              }
+            ],
+            [
+              "android:layout_height=\"0dp\"",
+              {
+                "ar": "جعل الارتفاع يعتمد على القيود عند توفر قيود مناسبة",
+                "en": "Let constraints determine the height when suitable constraints exist"
+              }
+            ]
+          ],
+          "note": {
+            "ar": "تُدرس في L10؛ تستخدم بادئة app: بعد تعريف xmlns:app.",
+            "en": "Covered in L10. Use the app: prefix after declaring xmlns:app."
+          }
+        },
+        {
+          "id": "scroll",
+          "title": {
+            "ar": "خصائص ScrollView",
+            "en": "ScrollView"
+          },
+          "scope": "L10",
+          "rows": [
+            [
+              "android:fillViewport=\"true\"",
+              {
+                "ar": "جعل المحتوى الداخلي يملأ الارتفاع المرئي عند الحاجة",
+                "en": "Let the inner content fill the visible height when needed"
+              }
+            ],
+            [
+              "android:scrollbars=\"vertical\"",
+              {
+                "ar": "إظهار شريط التمرير الرأسي",
+                "en": "Show the vertical scrollbar"
+              }
+            ],
+            [
+              "android:scrollbars=\"horizontal\"",
+              {
+                "ar": "إظهار شريط التمرير الأفقي عند دعم التمرير الأفقي",
+                "en": "Show the horizontal scrollbar when horizontal scrolling is supported"
+              }
+            ],
+            [
+              "android:scrollbars=\"none\"",
+              {
+                "ar": "إخفاء أشرطة التمرير",
+                "en": "Hide scrollbars"
+              }
+            ],
+            [
+              "android:overScrollMode=\"never\"",
+              {
+                "ar": "تعطيل تأثير التمرير الزائد",
+                "en": "Disable the overscroll effect"
+              }
+            ],
+            [
+              "android:overScrollMode=\"ifContentScrolls\"",
+              {
+                "ar": "السماح بتأثير التمرير الزائد عندما يكون المحتوى قابلًا للتمرير",
+                "en": "Allow overscroll only when the content can scroll"
+              }
+            ],
+            [
+              "android:clipToPadding=\"false\"",
+              {
+                "ar": "السماح برسم المحتوى داخل منطقة Padding عند التمرير",
+                "en": "Allow content to draw inside the padding area while scrolling"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "resources",
+          "title": {
+            "ar": "خصائص المعرّفات والموارد",
+            "en": "IDs & resources"
+          },
+          "scope": "L09",
+          "rows": [
+            [
+              "android:id=\"@+id/appTitle\"",
+              {
+                "ar": "إنشاء معرّف جديد للعنصر",
+                "en": "Create a new ID for the element"
+              }
+            ],
+            [
+              "android:text=\"@string/app_name\"",
+              {
+                "ar": "استدعاء نص من strings.xml",
+                "en": "Use a text resource from strings.xml"
+              }
+            ],
+            [
+              "android:textColor=\"@color/primary_blue\"",
+              {
+                "ar": "استدعاء لون من colors.xml",
+                "en": "Use a color resource from colors.xml"
+              }
+            ],
+            [
+              "android:background=\"@drawable/bg_button\"",
+              {
+                "ar": "استخدام خلفية من drawable",
+                "en": "Use a background from drawable resources"
+              }
+            ],
+            [
+              "android:src=\"@drawable/student_logo\"",
+              {
+                "ar": "استدعاء صورة من drawable",
+                "en": "Use an image from drawable resources"
+              }
+            ],
+            [
+              "android:padding=\"@dimen/spacing_medium\"",
+              {
+                "ar": "استخدام قيمة مسافة معرفة في dimens.xml",
+                "en": "Use a spacing value defined in dimens.xml"
+              }
+            ],
+            [
+              "android:contentDescription=\"@string/logo_desc\"",
+              {
+                "ar": "استدعاء وصف الصورة من النصوص",
+                "en": "Use an image description from string resources"
+              }
+            ]
+          ]
+        }
+      ]
     }
   ]
 };

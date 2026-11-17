@@ -101,12 +101,59 @@
     }
     function lectureHTML() {
       if (context.lecture.overviewType === "setup") return overviewHTML();
+      if (context.lecture.overviewType === "xml-reference") return xmlReferenceHTML();
       return /* HTML */ `<section class="hero">
         <div class="hero-meta" dir="ltr">${esc(context.lecture.code)}</div>
         <h1>${esc(tr(context.lecture.title))}</h1>
         <p class="hero-intro">${esc(tr(context.lecture.description))}</p>
         <div class="overview-steps">${stepLinksHTML()}</div>
       </section>`;
+    }
+    function xmlReferenceHTML() {
+      const ar = state.lang === "ar";
+      const lecture = context.lecture;
+      const count = lecture.sections.reduce((total, section) => total + section.rows.length, 0);
+      return /* HTML */ `<article class="chapter xml-reference">
+        <div class="hero-meta" dir="ltr">${esc(lecture.code)} · XML</div>
+        <h1>${esc(tr(lecture.title))}</h1>
+        <p class="chapter-desc">${esc(tr(lecture.description))}</p>
+        <div class="chapter-body">
+          <h2>${ar ? "مرجع خصائص XML" : "XML attribute reference"}</h2>
+          <p>${ar ? "لتنسيق أول شاشة Login في SmartStudents. نركّز في L09 على النصوص والأبعاد والمسافات والمحاذاة والخلفيات والموارد؛ بقية الأقسام مرجع للمحاضرات التالية، كما هو موضح بجانب كل قسم." : "For styling the first SmartStudents Login screen. L09 focuses on text, dimensions, spacing, alignment, backgrounds and resources. The remaining sections are references for later lectures, labelled beside each section."}</p>
+          <aside class="callout xml-reference-note">
+            <strong>${ar ? "كيف تستخدم هذا المرجع؟" : "How to use this reference"}</strong>
+            <p>${ar ? "كل سطر يوضح خاصية وقيمة كمثال؛ يمكنك تغيير القيمة بما يناسب تصميمك، ضمن القيم التي تدعمها الخاصية. لا تلصق جميع الأسطر داخل عنصر واحد. بعض الخصائص مخصصة لعناصر أو حاويات معينة. الخصائص الإضافية مثل letterSpacing وelevation وbias للتعرّف إليها عند الحاجة." : "Each row shows an attribute and an example value. You can change the value to suit your design, using values supported by that attribute. Do not paste every row into a single element. Some attributes apply only to specific views or containers. Extra attributes such as letterSpacing, elevation and bias are included for reference when needed."}</p>
+            <p>${ar ? "مثلًا، في" : "For example, in"} <code dir="ltr">android:textSize="24sp"</code> ${ar ? "يمكنك تغيير حجم النص إلى" : "you can change the text size to"} <code dir="ltr">18sp</code> ${ar ? "أو" : "or"} <code dir="ltr">32sp</code> ${ar ? "حسب الحاجة؛ ليس شرطًا استخدام" : "as needed; you do not have to use"} <code dir="ltr">24sp</code>.</p>
+          </aside>
+          <div class="xml-reference-toolbar">
+            <p>${lecture.sections.length} ${ar ? "قسمًا" : "sections"}<span aria-hidden="true"> · </span>${count} ${ar ? "خاصية وقيمة" : "attributes and values"}</p>
+            <div class="xml-reference-actions" role="group" aria-label="${ar ? "عرض أقسام المرجع" : "Reference section display"}">
+              <button type="button" class="button secondary" data-xml-toggle="open" aria-controls="xmlSections">${ar ? "فتح جميع الأقسام" : "Expand all sections"}</button>
+              <button type="button" class="button secondary" data-xml-toggle="close" aria-controls="xmlSections">${ar ? "إغلاق جميع الأقسام" : "Collapse all sections"}</button>
+            </div>
+          </div>
+          <div id="xmlSections">
+            ${lecture.sections.map((section, index) => /* HTML */ `<details class="disclosure xml-category" data-xml-section="${esc(section.id)}" open>
+              <summary>
+                <span class="xml-category-number" dir="ltr">${String(index + 1).padStart(2, "0")}</span>
+                <span class="xml-category-title">${esc(tr(section.title))}${ar ? `<small lang="en" dir="ltr">${esc(section.title.en)}</small>` : ""}</span>
+                <span class="xml-category-scope ${section.scope === "L09" ? "is-current" : ""}">${section.scope === "L09" ? (ar ? "أساسيات" : "Core") : (ar ? "لاحقًا" : "Later")} <bdi dir="ltr">${esc(section.scope)}</bdi></span>
+                <span class="xml-category-indicator" aria-hidden="true"></span>
+              </summary>
+              <div class="disclosure-body">
+                ${section.note ? `<p class="xml-category-note">${esc(tr(section.note))}</p>` : ""}
+                <div class="table-wrap" role="region" tabindex="0" aria-label="${esc(tr(section.title))}">
+                  <table class="xml-property-table">
+                    <caption class="sr-only">${esc(tr(section.title))}</caption>
+                    <thead><tr><th scope="col">${ar ? "الخاصية والقيمة" : "Attribute and value"}</th><th scope="col">${ar ? "وظيفتها" : "What it does"}</th></tr></thead>
+                    <tbody>${section.rows.map(([property, description]) => `<tr><td><code dir="ltr">${esc(property)}</code></td><td>${esc(tr(description))}</td></tr>`).join("")}</tbody>
+                  </table>
+                </div>
+              </div>
+            </details>`).join("")}
+          </div>
+        </div>
+      </article>`;
     }
     function overviewHTML() {
       const next = context.sequence.find((p) => !state.done.has(p.id));

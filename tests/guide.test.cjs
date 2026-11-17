@@ -236,9 +236,9 @@ test("static entrypoint uses ordered local scripts and available assets", () => 
 
 test("downloaded Kotlin examples match the displayed source exactly", () => {
   for (const file of ["main.kt", "main.kts"]) {
-    const download = read("downloads/" + file).trim();
+    const download = read("downloads/" + file).replace(/\r\n/g, "\n").trim();
     assert.ok(
-      Object.values(codes).some((code) => code.trim() === download),
+      Object.values(codes).some((code) => code.replace(/\r\n/g, "\n").trim() === download),
       file,
     );
   }

@@ -7,7 +7,7 @@
 
 Open `index.html` with `assets` and `downloads` beside it. No build or package installation is required.
 
-The welcome page lists published lectures. L01 contains the Android Studio and Kotlin setup guide.
+The welcome page lists published lectures. L01 contains the Android Studio and Kotlin setup guide. L09 provides a bilingual XML reference with 14 independently collapsible sections and 150 attribute/value rows.
 
 [Development and checks](DEVELOPMENT.md) · [Verification report](TEST_REPORT.md)
 

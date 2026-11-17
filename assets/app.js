@@ -136,6 +136,7 @@
       isLecture = lectureIds.has(state.current);
     $(".mobile-navigation").hidden = isCatalog || isLecture;
     $("#pageToolbar").hidden = isCatalog;
+    $("#resetButton").hidden = context.sequence.length === 0;
     $("#lectureBreadcrumb").hidden = isCatalog;
     $("#lectureBreadcrumb").setAttribute(
       "aria-label",
@@ -174,6 +175,13 @@
     }
   }
   document.addEventListener("click", async (event) => {
+    const xmlToggle = event.target.closest("[data-xml-toggle]");
+    if (xmlToggle) {
+      $$("[data-xml-section]", $("#view")).forEach((section) => {
+        section.open = xmlToggle.dataset.xmlToggle === "open";
+      });
+      return;
+    }
     if (event.target.closest(".skip-link")) {
       event.preventDefault();
       $("#main").focus({ preventScroll: true });
@@ -300,7 +308,7 @@
     if (printRestore) return;
     // Print all steps when printing a lecture landing page.
     printRestore = { scroll: window.scrollY };
-    if (lectureIds.has(state.current)) {
+    if (lectureIds.has(state.current) && context.sequence.length > 0) {
       $("#view").innerHTML = context.sequence.map((p) => chapterHTML(p)).join("");
       $$(".chapter", $("#view")).forEach((el) => el.classList.add("print-article"));
       hydrate();
